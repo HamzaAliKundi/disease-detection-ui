@@ -1,0 +1,32 @@
+.banner {
+  width: 100vw;
+  height: 200px;
+  position: absolute;
+  background: rgba(89, 173, 82, 0.8);
+  background-image: url("../Assets/Images/HomePageHeartPng.jpg");
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-color: rgba(57, 164, 50, 0.8);
+  background-blend-mode: multiply;
+}
+
+.title {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 86px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.underTitle{
+    font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 86px;
+  text-align: center;
+  color: #ffffff;
+}

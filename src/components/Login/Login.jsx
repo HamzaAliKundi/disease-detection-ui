@@ -1,12 +1,17 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import baseUrl from "../Assets/Apis/Apis";
 import "./login.css";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
-  const handleSubmitLogin = (e) => {
+  const navigate = useNavigate();
+
+  const handleSubmitLogin = async (e) => {
     e.preventDefault();
 
     const loginObj = {
@@ -14,7 +19,17 @@ const Login = () => {
       password: password,
     };
 
-    console.log("User Obj : ", loginObj);
+    await axios
+      .post(`${baseUrl}/api/account/login`, loginObj)
+      .then((res) => {
+        localStorage.setItem("token", res.data.token);
+        navigate("/prediction");
+      })
+      .catch((ex) => {
+        if (ex.response && ex.response.status === 400) {
+          setError(ex.response.data.message);
+        }
+      });
   };
   return (
     <>
@@ -44,6 +59,7 @@ const Login = () => {
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
+              <span className="text-danger mt-2">{error}</span>
 
               <button className="loginButton">
                 <span className="loginTextDesign">Login to continue</span>

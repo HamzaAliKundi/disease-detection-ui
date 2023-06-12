@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./home.css";
 
 const Home = () => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      navigate("/prediction");
+    }
+  }, [navigate]);
   return (
     <>
       <div className="wrapper">

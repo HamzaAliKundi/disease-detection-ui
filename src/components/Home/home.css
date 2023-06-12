@@ -1,0 +1,36 @@
+.wrapper {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../Assets/Images/HomePageHeartPng.jpg");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: rgba(57, 164, 50, 0.8);
+    background-blend-mode: multiply;
+}
+
+.title {
+    height: 72px;
+    left: calc(50% - 896px / 2);
+    margin-top: 167px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 72px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.middleImage {
+    position: absolute;
+    left: 35.78%;
+    right: 31.75%;
+    top: 32.42%;
+    bottom: 31.17%;
+    background-image: url("../Assets//Images//HOmePageMiddleImage.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}

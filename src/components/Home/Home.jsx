@@ -1,9 +1,15 @@
 import React from "react";
+import "./home.css";
 
 const Home = () => {
   return (
     <>
-      <h1>Home</h1>
+      <div className="wrapper">
+        <div className="title">Welcome to Heart Disease Detection</div>
+        <div className="middleImage">
+          <img src="../Assets/Images/HOmePageMiddleImage.png" alt="" />
+        </div>
+      </div>
     </>
   );
 };

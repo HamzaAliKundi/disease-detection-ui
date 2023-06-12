@@ -9,8 +9,8 @@ import Home from "./components/Home/Home";
 import NotFound from "./components/NotFound";
 import Login from "./components/Login/Login";
 import SignUP from "./components/SignUp/SignUP";
-import Prediction from "./components/Prediction/Prediction";
 import AboutUs from "./components/AboutUs/AboutUs";
+import Prediction from "./components/Prediction/Prediction";
 import UserAccount from "./components/UserAccount/UserAccount";
 
 function App() {

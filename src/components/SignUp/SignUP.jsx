@@ -198,12 +198,20 @@ const SignUP = () => {
             </div>
           </div>
 
-          <div className="mt-5 d-flex justify-content-center">
-            <div
-              onClick={handleSubmitRegister}
-              className="buttonDesign d-flex justify-content-center align-items-center"
-            >
-              <span className="buttonTextDesign">Create Account</span>
+          <div>
+            <div className="mt-5 d-flex justify-content-center">
+              <div
+                onClick={handleSubmitRegister}
+                className="buttonDesign d-flex justify-content-center align-items-center"
+              >
+                <span className="buttonTextDesign">Create Account</span>
+              </div>
+            </div>
+            <div className="d-flex justify-content-center my-4">
+              <span className="haveAnAccount"> have an account?</span> &nbsp;
+              <Link to="/login" className="toLoginPage">
+                Log In
+              </Link>
             </div>
           </div>
         </form>

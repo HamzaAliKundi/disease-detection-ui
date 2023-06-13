@@ -12,7 +12,7 @@
     justify-content: center;
 }
 
-.title {
+.title-login {
     left: calc(50% - 460px / 2 - 352px);
     top: 220px;
     font-family: "Poppins";

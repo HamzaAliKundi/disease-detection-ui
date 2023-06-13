@@ -42,7 +42,7 @@ const Login = () => {
       <div className="mainWrapper">
         <div className="left">
           <div className="leftInnerDesign">
-            <div className="title">Login to your account!</div>
+            <div className="title-login text-dark">Login to your account!</div>
             <form onSubmit={handleSubmitLogin}>
               <div className="inputGruoup">
                 <div className="label">Username</div>

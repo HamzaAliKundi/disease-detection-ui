@@ -1,0 +1,63 @@
+.image {
+    height: 400px !important;
+  background-image: url("./../Assets/Images/PredictionPage.png");
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.headerText {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 86px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.labelDesignPrediction {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.predictButton {
+  box-sizing: border-box;
+  width: 255px !important;
+  height: 60px;
+  background: #c61010;
+  border: 1px solid #d9d9d9;
+  box-shadow: 0px 0px 15px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.predictButtonText {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+}
+
+.footer {
+  width: 100%;
+  margin-top: 50px;
+  height: 78px;
+  left: 0px;
+  top: 946px;
+  background: #59ad52;
+}

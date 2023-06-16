@@ -108,6 +108,7 @@ const Prediction = () => {
                 min="10"
                 className="form-control shadow-sm"
                 defaultValue="10"
+                placeholder="10"
                 value={cholesterol}
                 onChange={(e) => setCholesterol(e.target.value)}
               />
@@ -141,6 +142,7 @@ const Prediction = () => {
                 type="number"
                 id="Heartrate"
                 min="30"
+                placeholder="30"
                 className="form-control shadow-sm"
                 defaultValue="30"
                 value={heartRate}
@@ -158,6 +160,7 @@ const Prediction = () => {
                 type="number"
                 id="Depression"
                 min="0"
+                placeholder="0"
                 className="form-control shadow-sm"
                 defaultValue="0"
                 value={depression}

@@ -1,0 +1,80 @@
+.aboutUsWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.aboutUs {
+    position: absolute;
+    width: 1077px;
+    height: 80vh;
+    background-image: url("./../Assets/Images/AboutUs.png");
+    display: flex;
+    float: left;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+}
+
+.titleAboutUs {
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 50px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 134%;
+    text-align: center;
+    color: #000000;
+}
+
+.infoAboutUs {
+    position: absolute;
+    width: 737px;
+    margin-left: 50px;
+    top: 170px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: #010101;
+}
+
+.ourMissionTitle {
+    position: absolute;
+    margin-left: 50px;
+    top: 380px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 134%;
+    text-align: center;
+    color: #000000;
+}
+
+.infoOurMission {
+    position: absolute;
+    width: 787px;
+    height: 144px;
+    top: 440px;
+    margin-left: 50px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: #010101;
+}
+
+.footer {
+    width: 100%;
+    margin-top: 631px;
+    height: 78px;
+    left: 0px;
+    top: 946px;
+    background: #59ad52;
+}

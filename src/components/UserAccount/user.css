@@ -83,4 +83,19 @@
     left: 0px;
     top: 946px;
     background: #59ad52;
+    display: flex;
+    justify-content: end;
+    align-items: start;
   }
+
+  .footerLinkDesign{
+    text-decoration: none;
+    margin-right: 12px;
+    margin-bottom: 4px;
+    color: white;
+    font-weight: 700;
+  }
+ 
+ .footerLinkDesign:hover {
+    color: blue;
+ } 

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./user.css";
 import userAccount from "../Assets/Images/userAccountPic.png";
+import { Link } from "react-router-dom";
 
 const UserAccount = () => {
   const navigate = useNavigate();
@@ -108,7 +109,13 @@ const UserAccount = () => {
           <img src={userAccount} width="675px" height="500px" alt="" />
         </div>
       </div>
-      <div className="footer"></div>
+      <div className="footer">
+        <span>
+          <Link to="/about-us" className="footerLinkDesign">
+            About Us
+          </Link>
+        </span>
+      </div>
     </>
   );
 };

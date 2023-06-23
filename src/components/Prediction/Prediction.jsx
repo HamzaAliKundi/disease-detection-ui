@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./prediction.css";
+import axios from "axios";
+import baseUrl from "../Assets/Apis/Apis";
 
 const Prediction = () => {
   const [age, setAge] = useState("");
@@ -19,20 +21,29 @@ const Prediction = () => {
     }
   }, [navigate]);
 
-  const handleSubmitPrediction = (e) => {
+  const handleSubmitPrediction = async (e) => {
     e.preventDefault();
 
     const predictionObj = {
-      age: age,
+      age: parseInt(age),
       chestPain: chestPain,
-      majorVessels: majorVessels,
-      cholesterol: cholesterol,
+      majorVessels: parseInt(majorVessels),
+      cholesterol: parseInt(cholesterol),
       thalassemia: thalassemia,
-      heartRate: heartRate,
-      depression: depression,
+      heartRate: parseFloat(heartRate),
+      depression: parseFloat(depression),
     };
 
-    console.log("Prediction object : ", predictionObj);
+    console.log("Obj : ", predictionObj);
+
+    await axios
+      .post(`${baseUrl}/api/disease/detect-heart-disease`, predictionObj)
+      .then((res) => {
+        console.log("Res : ", res.data);
+      })
+      .catch((err) => {
+        console.log("Error : ", err);
+      });
   };
 
   return (
@@ -73,7 +84,7 @@ const Prediction = () => {
                 <option value="Typical Angina">Typical Angina</option>
                 <option value="Atypical Angina">Atypical Angina</option>
                 <option value="Non-anginal Pain">Non-anginal Pain</option>
-                <option value="Asymptomatic">Asymptomatic</option>
+                <option value="Asymptomatics">Asymptomatic</option>
               </select>
             </div>
           </div>
@@ -126,9 +137,9 @@ const Prediction = () => {
                 value={thalassemia}
                 onChange={(e) => setThalassemia(e.target.value)}
               >
-                <option value="3: Normal">3: Normal</option>
-                <option value="6: Fixed">6: Fixed</option>
-                <option value="7: Reversable">7: Reversable</option>
+                <option value="Normal">3: Normal</option>
+                <option value="Fixed">6: Fixed</option>
+                <option value="Reversable">7: Reversable</option>
               </select>
             </div>
           </div>

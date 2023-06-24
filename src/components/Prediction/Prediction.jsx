@@ -12,6 +12,7 @@ const Prediction = () => {
   const [thalassemia, setThalassemia] = useState("");
   const [heartRate, setHeartRate] = useState("");
   const [depression, setDepression] = useState("");
+  const [prediction, setPrediction] = useState("");
 
   const navigate = useNavigate();
   useEffect(() => {
@@ -26,20 +27,21 @@ const Prediction = () => {
 
     const predictionObj = {
       age: parseInt(age),
-      chestPain: chestPain,
-      majorVessels: parseInt(majorVessels),
-      cholesterol: parseInt(cholesterol),
-      thalassemia: thalassemia,
-      heartRate: parseFloat(heartRate),
-      depression: parseFloat(depression),
+      cp: chestPain,
+      ca: parseInt(majorVessels),
+      chol: parseInt(cholesterol),
+      thal: parseInt(thalassemia),
+      thalach: parseFloat(heartRate),
+      oldpeak: parseFloat(depression),
     };
 
     console.log("Obj : ", predictionObj);
 
     await axios
-      .post(`${baseUrl}/api/disease/detect-heart-disease`, predictionObj)
+      .post(`http://localhost:5000/predict`, predictionObj)
       .then((res) => {
         console.log("Res : ", res.data);
+        setPrediction(res.data.prediction);
       })
       .catch((err) => {
         console.log("Error : ", err);
@@ -81,10 +83,10 @@ const Prediction = () => {
                 value={chestPain}
                 onChange={(e) => setChestPain(e.target.value)}
               >
-                <option value="Typical Angina">Typical Angina</option>
-                <option value="Atypical Angina">Atypical Angina</option>
-                <option value="Non-anginal Pain">Non-anginal Pain</option>
-                <option value="Asymptomatics">Asymptomatic</option>
+                <option value="typical angina">Typical Angina</option>
+                <option value="atypical angina">Atypical Angina</option>
+                <option value="non-anginal pain">Non-anginal Pain</option>
+                <option value="asymptomatic">Asymptomatic</option>
               </select>
             </div>
           </div>
@@ -137,9 +139,9 @@ const Prediction = () => {
                 value={thalassemia}
                 onChange={(e) => setThalassemia(e.target.value)}
               >
-                <option value="Normal">3: Normal</option>
-                <option value="Fixed">6: Fixed</option>
-                <option value="Reversable">7: Reversable</option>
+                <option value="3">3: Normal</option>
+                <option value="6">6: Fixed</option>
+                <option value="7">7: Reversable</option>
               </select>
             </div>
           </div>
@@ -184,6 +186,7 @@ const Prediction = () => {
           <div className="predictButton" onClick={handleSubmitPrediction}>
             <span className="predictButtonText">Predict</span>
           </div>
+          <span className="text-danger">{prediction}</span>
         </div>
       </div>
       <div className="footer"></div>

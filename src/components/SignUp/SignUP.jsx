@@ -67,7 +67,7 @@ const SignUP = () => {
       </div>
 
       <div className="container">
-        <form>
+        <form onSubmit={handleSubmitRegister}>
           <div className="row mx-5 d-flex justify-content-center mt-5">
             <div className="col-lg-6">
               <div className="form-group">
@@ -80,6 +80,7 @@ const SignUP = () => {
                   className="form-control shadow-sm registerInputDesign"
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
+                  required
                 />
               </div>
             </div>
@@ -94,6 +95,7 @@ const SignUP = () => {
                   className="form-control shadow-sm registerInputDesign"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
+                  required
                 />
               </div>
             </div>
@@ -111,6 +113,7 @@ const SignUP = () => {
                   className="form-control shadow-sm registerInputDesign"
                   value={userName}
                   onChange={(e) => setUserName(e.target.value)}
+                  required
                 />
               </div>
               <span className="text-danger">{error}</span>
@@ -125,6 +128,7 @@ const SignUP = () => {
                   className="form-control registerInputDesign shadow-sm"
                   value={gender}
                   onChange={(e) => setGender(e.target.value)}
+                  required
                 >
                   <option value="" selected disabled>
                     Select Gender
@@ -148,6 +152,7 @@ const SignUP = () => {
                   className="form-control shadow-sm registerInputDesign"
                   value={age}
                   onChange={(e) => setAge(e.target.value)}
+                  required
                 />
               </div>
             </div>
@@ -162,6 +167,7 @@ const SignUP = () => {
                   className="form-control shadow-sm registerInputDesign"
                   value={city}
                   onChange={(e) => setCity(e.target.value)}
+                  required
                 />
               </div>
             </div>
@@ -179,6 +185,7 @@ const SignUP = () => {
                   className="form-control shadow-sm registerInputDesign"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  required
                 />
               </div>
             </div>
@@ -193,6 +200,7 @@ const SignUP = () => {
                   className="form-control shadow-sm registerInputDesign"
                   value={phoneNumber}
                   onChange={(e) => setPhoneNumber(e.target.value)}
+                  required
                 />
               </div>
             </div>
@@ -200,12 +208,9 @@ const SignUP = () => {
 
           <div>
             <div className="mt-5 d-flex justify-content-center">
-              <div
-                onClick={handleSubmitRegister}
-                className="buttonDesign d-flex justify-content-center align-items-center"
-              >
+              <button className="buttonDesign d-flex justify-content-center align-items-center">
                 <span className="buttonTextDesign">Create Account</span>
-              </div>
+              </button>
             </div>
             <div className="d-flex justify-content-center my-4">
               <span className="haveAnAccount"> have an account?</span> &nbsp;

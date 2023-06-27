@@ -1,10 +1,14 @@
 import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import "./user.css";
-import userAccount from "../Assets/Images/userAccountPic.png";
 import { Link } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import userAccount from "../Assets/Images/userAccountPic.png";
+import "./user.css";
 
 const UserAccount = () => {
+  const params = useParams();
+  const predict = params.id;
+  console.log("Predicst Parama : ", predict);
+
   const navigate = useNavigate();
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -91,7 +95,7 @@ const UserAccount = () => {
                   </th>
                   <td className="text-danger">Disease Stage</td>
                   <td>
-                    <b>4</b>
+                    <b>{predict}</b>
                   </td>
                 </tr>
               </tbody>

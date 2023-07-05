@@ -113,12 +113,23 @@ const UserAccount = () => {
           <img src={userAccount} width="675px" height="500px" alt="" />
         </div>
       </div>
+
       <div className="footer">
-        <span>
-          <Link to="/about-us" className="footerLinkDesign">
-            About Us
+        <div>
+          <span>
+            <Link to="/about-us" className="footerLinkDesign">
+              About Us
+            </Link>
+          </span>
+          <br />
+          <Link
+            style={{ cursor: "pointer" }}
+            to="/logout"
+            className="footerLinkDesign"
+          >
+            Logout
           </Link>
-        </span>
+        </div>
       </div>
     </>
   );
